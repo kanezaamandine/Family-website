@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Beautiful Family</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <section class="hero">
+    <h1>Welcome to Our Family 👨‍👩‍👧‍👦</h1>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <img src="mama.jpg" alt="Slide 1">
+        <img src="kaneza.jpg" alt="Slide 2">
+        <img src="big.jpg" alt="Slide 3">
+        <img src="bi.jpg" alt="Slide 3">
+      </div>
+    </div>
+    <a href="#family" class="scroll-btn">Click to Explore ↓</a>
+  </section>
+
+
+  <main id="family">
+    <section class="family">
+     
+      <div class="member fade-in">
+        <img src="images/father.jpg" alt="Father">
+        <h2>Dad - Mr. Jean</h2>
+        <p>Our superhero who always supports and guides us. Loves leadership and fixing things.</p>
+      </div>
+
+    
+      <div class="member fade-in">
+        <img src="mama.jpg" alt="Mother">
+        <h2>Mom - Mrs. Grace</h2>
+        <p>The heart of our home who keeps everyone smiling. Amazing at cooking and much caring!</p>
+      </div>
+
+    
+      <div class="member fade-in">
+        <img src="big.jpg" alt="Kid 1">
+        <h2>Shema</h2>
+        <p>Our big brother who understands our situation no matter how it is.</p>
+      </div>
+
+    
+      <div class="member fade-in">
+        <img src="bi.jpg" alt="Kid 2">
+        <h2>Ntwari</h2>
+        <p>The second born of our family with many stories and looking forward to treating people .</p>
+      </div>
+
+    
+      <div class="member fade-in">
+        <img src="kaneza.jpg" alt="Kid 3">
+        <h2>Kaneza</h2>
+        <p>The home's future programmer ready to change everything.</p>
+      </div>
+
+      <!-- Kid 4 -->
+      <div class="member fade-in">
+        <img src="ke.jpg" alt="Kid 4">
+        <h2>Keza</h2>
+        <p>Our little explorer with endless energy in studying and the best giggles!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Our Happy Family. Made with love ❤️.</p>
+  </footer>
+
+  <!-- JS FOR CAROUSEL -->
+  <script>
+    const carousel = document.getElementById('carousel');
+    let scrollAmount = 0;
+
+    function autoScroll() {
+      scrollAmount += 1;
+      if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+        scrollAmount = 0;
+      }
+      carousel.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    setInterval(autoScroll, 20);
+  </script>
+</body>
+</html>
